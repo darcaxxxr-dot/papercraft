@@ -1,0 +1,32 @@
+{
+  "paper": { "preset": "custom", "widthMm": 58, "heightMm": 140, "marginMm": 0.5 },
+  "data": {
+    "storeName": "TOKO MAKMUR",
+    "address": "Jl. Merdeka No. 1, Jakarta",
+    "receiptNo": "INV-20231107-001",
+    "date": "07/11/2026",
+    "cashier": "Budi",
+    "footer": "Terima kasih atas kunjungan Anda!",
+    "items": [
+      { "name": "Kopi Hitam", "qty": 2, "price": 15000 },
+      { "name": "Roti Bakar", "qty": 1, "price": 25000 }
+    ],
+    "discount": 5000,
+    "taxPercent": 10
+  },
+  "elements": [
+    { "id": "el_1", "type": "dynamicText", "x": 0.5, "y": 2, "w": 57, "h": 8, "zIndex": 0, "props": { "binding": "{{storeName}}", "fontSize": 14, "fontFamily": "monospace", "bold": true, "italic": false, "align": "center" } },
+    { "id": "el_2", "type": "dynamicText", "x": 0.5, "y": 10, "w": 57, "h": 8, "zIndex": 0, "props": { "binding": "{{address}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "center" } },
+    { "id": "el_3", "type": "divider", "x": 0.5, "y": 18, "w": 57, "h": 2, "zIndex": 0, "props": { "thickness": 1, "style": "dashed", "color": "#000000" } },
+    { "id": "el_4", "type": "itemList", "x": 0.5, "y": 22, "w": 57, "h": 35, "zIndex": 0, "props": { "fontSize": 10, "align": "left", "showPrice": true, "fontFamily": "monospace", "bold": false, "italic": false } },
+    { "id": "el_5", "type": "divider", "x": 0.5, "y": 59, "w": 57, "h": 2, "zIndex": 0, "props": { "thickness": 1, "style": "solid", "color": "#000000" } },
+    { "id": "el_sub", "type": "dynamicText", "x": 0.5, "y": 63, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "Subtotal: {{subtotal}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "right" } },
+    { "id": "el_disc", "type": "dynamicText", "x": 0.5, "y": 68, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "Diskon: -{{discount}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "right" } },
+    { "id": "el_tax", "type": "dynamicText", "x": 0.5, "y": 73, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "Pajak: {{taxAmount}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "right" } },
+    { "id": "el_total", "type": "dynamicText", "x": 0.5, "y": 78, "w": 57, "h": 8, "zIndex": 0, "props": { "binding": "Total: {{total}}", "fontSize": 12, "fontFamily": "monospace", "bold": true, "italic": false, "align": "right" } },
+    { "id": "el_7", "type": "dynamicText", "x": 0.5, "y": 89, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "No: {{receiptNo}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "left" } },
+    { "id": "el_8", "type": "dynamicText", "x": 0.5, "y": 95, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "Tgl: {{date}}", "fontSize": 10, "fontFamily": "monospace", "bold": false, "italic": false, "align": "left" } },
+    { "id": "el_9", "type": "dynamicText", "x": 0.5, "y": 105, "w": 57, "h": 6, "zIndex": 0, "props": { "binding": "{{footer}}", "fontSize": 9, "fontFamily": "monospace", "bold": false, "italic": true, "align": "center" } },
+    { "id": "el_10", "type": "barcode", "x": 0.5, "y": 115, "w": 57, "h": 20, "zIndex": 0, "props": { "value": "123456789012", "format": "EAN13", "height": 40 } }
+  ]
+}
